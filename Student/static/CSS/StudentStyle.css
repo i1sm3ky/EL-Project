@@ -1,0 +1,74 @@
+html {
+    background-image: url("Images/Manipal.png");
+    background-position: center;
+    height: 100%;
+    width: 100%;
+    background-size: cover;
+    font-family: Roboto;
+}
+
+.bg {
+    background-color: rgba(0, 0, 0, 0.3);
+    display: inline-block;
+    margin: 0;
+    top: 50%;
+    left: 50%;
+    position: absolute;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    border: solid rgba(10, 10, 10, 0.7) 1px;
+    border-radius: 20px;
+    padding: 200px;
+    padding-left: 150px;
+    padding-right: 150px;
+    box-shadow: -8px 8px 15px rgba(0, 0, 0, 0.15);
+    backdrop-filter: blur(2.5px);
+}
+
+#class_heading {
+    font-size: 80px;
+    text-align: center;
+    color: #DDDDDD;
+}
+
+#otp_input {
+    display: block;
+    margin: auto;
+    margin-bottom: 15px;
+    background: none;
+    border: none;
+    border-bottom: solid rgba(180, 180, 180, 0.8) 1px;
+    text-align: center;
+    width: 70%;
+    color: #DDDDDD;
+    font-size: 47px;
+}
+
+#otp_input:focus {
+    outline: none;
+}
+
+#otp_input::placeholder {
+    color: #AAAAAA;
+}
+
+#submit_btn {
+    background-color: rgb(42, 131, 226);
+    color: white;
+    font-weight: bold;
+    font-size: 30px;
+    padding-top: 7px;
+    padding-bottom: 7px;
+    padding-right: 15px;
+    padding-left: 15px;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: background-color 0.15s;
+    display: block;
+    margin: auto;
+}
+
+#submit_btn:active {
+    background-color: rgb(117, 167, 220);
+}

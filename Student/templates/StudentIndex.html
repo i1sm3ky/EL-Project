@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Attendence Portal Student Side</title>
+    <link rel="stylesheet", href="{{ url_for('static', filename='CSS/StudentStyle.css')}}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <form action="{{ url_for('StudentIndex') }}" method="post">
+      <div class="bg">
+        <p id="class_heading"> {{ AttendenceStatus }} {{ RoomNo }}</p>
+        <input type="text" placeholder="Enter OTP" id="otp_input" name="otp_input">
+        <button id="submit_btn" type="submit">Submit</button>
+      </div>
+    </form>
+  </body>
+</html>

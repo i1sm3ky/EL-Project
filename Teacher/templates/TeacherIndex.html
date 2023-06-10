@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Attendence Portal Teacher Side</title>
+    <link rel="stylesheet", href="{{ url_for('static', filename='CSS/TeacherStyle.css')}}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <meta http-equiv="refresh" content={{ TimeInterval }}>
+  </head>
+  <body>
+    <form action="{{ url_for('TeacherIndex') }}" method="post">
+      <div class="bg">
+        <p id="class_heading"> Class ({{ RoomNo }}) Attendence</p>
+        <input type="text" placeholder="Enter OTP" id="otp_input" name="otp_input">
+        <button id="start_btn" type="submit">Start Attendence</button>
+        <a id="stop_btn" href="/Stop">Stop Attendence</a>
+        <a id="export_btn" href="/Export">Export Attendence</a>
+        <p class="List_Head">SNo Name Registration Number</p>
+        {% for Student in PresentStudents %}
+          <ol class="List">
+            <li>{{ Student }}</li>
+          </ol>
+        {% endfor %}
+      </div>
+    </form>
+  </body>
+</html>
